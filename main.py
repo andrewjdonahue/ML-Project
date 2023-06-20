@@ -4,7 +4,7 @@ Created on Tue Jun 20 12:49:21 2023
 
 @author: stephanie.contino
 """
-
+# import libraries
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
 from matplotlib import pyplot
@@ -20,3 +20,22 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+
+# define url and names
+url = '2022.csv'
+names = ['objectid',
+         'dc_dist', 
+         'dispatch_date',
+         'hour', 
+         'location_block', 
+         'text_general_code',
+         'lat', 
+         'lng']
+
+# read graph csv
+graph = read_csv(url, dtype = {'lat': float, 'lng': float})
+graphset = graph[['lat', 'lng']]
+
+# create scatterplot (becomes map of phl)
+pyplot.scatter(graphset.lng, graphset.lat, c = "blue")
+pyplot.show()
