@@ -40,9 +40,10 @@ graphset = graph[['lat', 'lng']]
 pyplot.scatter(graphset.lng, graphset.lat, c = "blue")
 pyplot.show()
 
-### BEGIN PROJECT CODE HERE ###
+### BEGIN PROJECT CODE HERE (Last Edited: 6/29/23) ###
 
 ## List of Variables:
+
 #PointValue = Crime1+Crime2+Crime3+Crime4...
 #SafetyRating = 100-PointValue
 SafetyWarning = "Warning: This safety recommendation is based only on the crime data for Philadelphia, therefore, even if a high safety rating is given and the area is safe relative to the rest of the city, there is always a risk of danger, especially at night. Personal discretion and caution should always be used."
