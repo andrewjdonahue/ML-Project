@@ -42,8 +42,22 @@ pyplot.show()
 
 ### BEGIN PROJECT CODE HERE ###
 
-PointValue = Crime1+Crime2+Crime3+Crime4...
-SafetyRating = 100-PointValue
+## List of Variables:
+#PointValue = Crime1+Crime2+Crime3+Crime4...
+#SafetyRating = 100-PointValue
 SafetyWarning = "Warning: This safety recommendation is based only on the crime data for Philadelphia, therefore, even if a high safety rating is given and the area is safe relative to the rest of the city, there is always a risk of danger, especially at night. Personal discretion and caution should always be used."
+InitialPrompt = "Please enter a street name within Philadelphia and time in 24-hr format. (Ex: LOCUST ST, 2100)"
+AcceptanceMessage = "Street name and time accepted. Generating results..."
+ErrorMessage1 = "Please enter a street name within Philadelphia."
+ErrorMessage2 =  "The street name is misspelled, please try again."
+ErrorMessage3 = "There is no data for the given street name, please try a nearby street."
+#StreetInput = The street name that the user has input
+#TimeInput - The time that the user has input
+#UserInput = The whole user input (street and time), in string form.
+#SafetyRating = 3-digit integer, assigned to every UserInput
+#Breakdown = A summary of the crime statistics from given UserInput
+
 
 print(SafetyWarning)
+print(InitialPrompt)
+print(AcceptanceMessage)
